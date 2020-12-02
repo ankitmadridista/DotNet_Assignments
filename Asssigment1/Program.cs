@@ -32,6 +32,9 @@ namespace Assignment1
         private int empno;
         public int Empno
         {
+            private set {
+                empno = value;
+            }
             get
             {
                 return empno;
@@ -83,38 +86,47 @@ namespace Assignment1
         #endregion Methods
         #region constructor
         
-        public Employee(string Name, decimal Basic, short DeptNo)
+        //public Employee(string Name, decimal Basic, short DeptNo)
+        //{
+        //    empno1++;
+        //    empno = empno1;
+        //    this.Name = Name;
+        //    this.Basic = Basic;
+        //    this.Deptno = DeptNo;
+        //}
+        //public Employee(string Name, decimal Basic)
+        //{
+        //    empno1++;
+        //    empno = empno1;
+        //    this.Name = Name;
+        //    this.Basic = Basic;
+        //    this.Deptno = 0;
+        //}
+        //public Employee(string Name)
+        //{
+        //    empno1++;
+        //    empno = empno1;
+        //    this.Name = Name;
+        //    this.Basic = 0;
+        //    this.Deptno = 0;
+        //}
+        //public Employee()
+        //{
+        //    empno1++;
+        //    empno = empno1;
+        //    this.Name = "";
+        //    this.Basic = 0;
+        //    this.Deptno = 0;
+
+        //}
+        public Employee(string Name="", decimal Basic=0, short DeptNo=0)
         {
             empno1++;
-            empno = empno1;
+            //empno = empno1;
+            this.Empno = empno1;
             this.Name = Name;
             this.Basic = Basic;
             this.Deptno = DeptNo;
-        }
-        public Employee(string Name, decimal Basic)
-        {
-            empno1++;
-            empno = empno1;
-            this.Name = Name;
-            this.Basic = Basic;
-            this.Deptno = 0;
-        }
-        public Employee(string Name)
-        {
-            empno1++;
-            empno = empno1;
-            this.Name = Name;
-            this.Basic = 0;
-            this.Deptno = 0;
-        }
-        public Employee()
-        {
-            empno1++;
-            empno = empno1;
-            this.Name = "";
-            this.Basic = 0;
-            this.Deptno = 0;
-
         }
         #endregion constructor
     }
