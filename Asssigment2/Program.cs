@@ -53,6 +53,7 @@ namespace Assignment2
             Console.WriteLine(obj.Name);
             Console.WriteLine(obj.Deptno);
             Console.WriteLine(obj.Empno);
+            Console.WriteLine("=================");
 
             Console.ReadLine();
         }
@@ -107,12 +108,13 @@ namespace Assignment2
         //abstract decimal CalcNetSalary()
         public abstract decimal CalcNetSalary();
 
-        public Employee(string name = "", short deptno = 0)
+        public Employee(string name = "", short deptno = 0, decimal basic=0)
         {
             empno1++;
             this.empno = empno1;
             this.Name = name ;
             this.Deptno = deptno;
+            this.Basic = basic;
         }
 
     }
@@ -149,9 +151,8 @@ namespace Assignment2
             get { return designation; }
         }
      
-        public Manager(string name, short deptno, decimal basic, string designation) : base( name,  deptno)
+        public Manager(string name="", short deptno=0, decimal basic=0, string designation="GM") : base( name,  deptno, basic)
         {
-            this.Basic = basic;
             this.Designation = designation;
         }
     }
@@ -183,7 +184,7 @@ namespace Assignment2
         }
 
 
-        public GeneralManager(string name, short deptno, decimal basic, string designation, string perks) : base(name, deptno, basic, designation)
+        public GeneralManager(string name="", short deptno=0, decimal basic=0, string designation="GM", string perks="none") : base(name, deptno, basic, designation)
         {
             this.Perks = perks;
         }
@@ -210,9 +211,9 @@ namespace Assignment2
         }
 
         
-        public CEO(string name, short deptno, decimal basic) : base(name, deptno)
+        public CEO(string name="", short deptno=0, decimal basic=0) : base(name, deptno, basic)
         {
-            this.Basic = basic;
+
         }
     }
 }
