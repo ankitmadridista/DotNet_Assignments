@@ -1,0 +1,7 @@
+Write lambdas for the following functions :
+1. decimal SimpleInterest(decimal P, decimal N, decimal R) -> returns calculated SimpleInterest
+2. bool IsGreater(int a, int b) -> returns true if a is > b
+3. decimal GetBasic(Employee e) -> returns the Basic salary of the employee
+4. bool IsEven(int num) -> returns true if the number is an even number
+5. bool IsGreaterThan10000(Employee e) -> returns true if the Basic Salary is > 10000
+
