@@ -1,0 +1,46 @@
+﻿@model SecWebApp.Models.User
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="row justify-content-between ">
+
+    <h2>Home</h2>
+
+    <a href="~/User/Logout"><input type="submit" value="Log-out" class="btn btn-danger" /> </a>
+
+</div>
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Welcome
+        </dt>
+
+        <dd>
+            @Session["name"]
+          
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Session["fullname"]
+          
+        </dd>
+
+    </dl>
+</div>
+  
+
+<div class="col-md-offset-2 col-md-10">
+    @Html.ActionLink("Edit", "Edit")
+</div>
+
+
